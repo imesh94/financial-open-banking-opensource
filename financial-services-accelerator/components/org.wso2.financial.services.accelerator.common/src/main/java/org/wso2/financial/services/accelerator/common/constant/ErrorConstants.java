@@ -340,5 +340,246 @@ public class ErrorConstants {
     public static final String INITIATION_NOT_JSON = "Initiation is not in the correct JSON " +
             "format in the request";
     public static final String INSTRUCTION_NOT_JSON = "Instruction is not in the correct JSON format in the request";
+
+    //Error Response Structure constants
+    public static final String MESSAGE = "Message";
+    public static final String ERROR_CODE = "ErrorCode";
+    public static final String ERROR_URL = "ErrorURL";
+    public static final String ERROR_DESCRIPTION = "error_description";
+
+    //HTTP Error Codes
+    public static final String HTTP_BAD_REQUEST = "400";
+    public static final String HTTP_UNAUTHORIZED = "401";
+    public static final String HTTP_FORBIDDEN = "403";
+    public static final String HTTP_NOT_FOUND = "404";
+    public static final String HTTP_NOT_ALLOWED = "405";
+    public static final String HTTP_NOT_ACCEPTABLE = "406";
+    public static final String HTTP_TOO_MANY_REQUESTS = "429";
+    public static final String HTTP_SERVER_ERROR = "500";
+    public static final String HTTP_CONFLICT = "409";
+    public static final String HTTP_UNSUPPORTED_MEDIA_TYPE = "415";
+
+    // High level textual error code, to help categorize the errors.
+    public static final String BAD_REQUEST_CODE = "400 BadRequest";
+    public static final String UNAUTHORIZED_CODE = "401 Unauthorized";
+    public static final String FORBIDDEN_CODE = "403 Forbidden";
+    public static final String NOT_FOUND_CODE = "404 Not Found";
+    public static final String NOT_ALLOWED_CODE = "405 Method Not Allowed";
+    public static final String NOT_ACCEPTABLE_CODE = "406 Not Acceptable";
+    public static final String TOO_MANY_REQUESTS_CODE = "429 Too Many Requests";
+    public static final String SERVER_ERROR_CODE = "500 Internal Server Error";
+    public static final String CONFLICT_CODE = "409 Conflict";
+    public static final String UNSUPPORTED_MEDIA_TYPE_CODE = "415 Unsupported Media Type";
+
+    //Low level textual error code
+    public static final String FIELD_EXPECTED = "UK.OBIE.Field.Expected";
+    public static final String FIELD_UNEXPECTED = "UK.OBIE.Field.Unexpected";
+    public static final String HEADER_INVALID = "UK.OBIE.Header.Invalid";
+    public static final String HEADER_INVALID_COP = "UK.OBIE.Header";
+    public static final String HEADER_MISSING = "UK.OBIE.Header.Missing";
+    public static final String JWS_HEADER_MISSING_COP = "UK.OBIE.Signature";
+    public static final String RULES_CONTROL_PARAMETERS = "UK.OBIE.Rules.FailsControlParameters";
+    public static final String RULES_DUPLICATE_REFERENCE = "UK.OBIE.Rules.DuplicateReference";
+    public static final String RULES_RESOURCE_ALREADY_EXISTS = "UK.OBIE.Rules.ResourceAlreadyExists";
+    public static final String SIGNATURE_INVALID = "UK.OBIE.Signature.Invalid";
+    public static final String SIGNATURE_INVALID_CLAIM = "UK.OBIE.Signature.InvalidClaim";
+    public static final String SIGNATURE_MISSING_CLAIM = "UK.OBIE.Signature.MissingClaim";
+    public static final String SIGNATURE_MALFORMED = "UK.OBIE.Signature.Malformed";
+    public static final String SIGNATURE_MISSING = "UK.OBIE.Signature.Missing";
+    public static final String SIGNATURE_UNEXPECTED = "UK.OBIE.Signature.Unexpected";
+    public static final String UNSUPPORTED_ACCOUNT_IDENTIFIER = "UK.OBIE.Unsupported.AccountIdentifier";
+    public static final String UNSUPPORTED_ACCOUNT_SECONDARY_IDENTIFIER =
+            "UK.OBIE.Unsupported.AccountSecondaryIdentifier";
+    public static final String UNSUPPORTED_CURRENCY = "UK.OBIE.Unsupported.Currency";
+    public static final String UNSUPPORTED_INSTRUCTED_AMOUNT = "UK.OBIE.Unsupported.InstructedAmount";
+    public static final String UNSUPPORTED_FREQUENCY = "UK.OBIE.Unsupported.Frequency";
+    public static final String UNSUPPORTED_EXECUTION_DATE = "UK.OBIE.Unsupported.RequestedExecutionDate";
+    public static final String UNSUPPORTED_SCHEME = "UK.OBIE.Unsupported.Scheme";
+    public static final String UNSUPPORTED_PSU_AUTHENTICATION_METHOD = "UK.OBIE.Unsupported.PSUAuthenticationMethods";
+    public static final String UNSUPPORTED_VRP_TYPE = "UK.OBIE.Unsupported.VRPType";
+    public static final String UNSUPPORTED_EVENT_TYPE = "UK.OBIE.Unsupported.EventType";
+    public static final String REAUTHENTICATE = "UK.OBIE.Reauthenticate";
+
+    // Low level textual error code for UK API v4
+    public static final String U001 = "U001";
+    public static final String U002 = "U002";
+    public static final String U003 = "U003";
+    public static final String U004 = "U004";
+    public static final String U005 = "U005";
+    public static final String U006 = "U006";
+    public static final String U007 = "U007";
+    public static final String U008 = "U008";
+    public static final String U009 = "U009";
+    public static final String U010 = "U010";
+    public static final String U011 = "U011";
+    public static final String U012 = "U012";
+    public static final String U013 = "U013";
+    public static final String U014 = "U014";
+    public static final String U015 = "U015";
+    public static final String U016 = "U016";
+    public static final String U017 = "U017";
+    public static final String U018 = "U018";
+    public static final String U019 = "U019";
+    public static final String U020 = "U020";
+    public static final String U021 = "U021";
+    public static final String U022 = "U022";
+    public static final String U023 = "U023";
+    public static final String U024 = "U024";
+    public static final String U025 = "U025";
+    public static final String U026 = "U026";
+    public static final String U027 = "U027";
+    public static final String U028 = "U028";
+    public static final String U029 = "U029";
+    public static final String U000 = "U000";
+
+    //Path of the fields in request
+    public static final String PATH_FINANCIAL_ID = "Header.X-fapi-financial-id";
+    public static final String PATH_X_FAPI_CUSTOMER_LAST_LOGGED_TIME = "Header.X-fapi-customer-last-logged-time";
+    public static final String PATH_X_WSO2_CLIENT_ID = "Header.x-wso2-client-id";
+    public static final String PATH_REQUEST_ID = "Header.Consent-id";
+    public static final String PATH_USER_ID = "Header.User-id";
+    public static final String PATH_ACCOUNT_ID = "Header.Account-ids";
+    public static final String PATH_IDEM_KEY = "Header.x-Idempotency-Key";
+    public static final String PATH_REQUEST_TIME = "Payload.Time";
+    public static final String PATH_PERMISSIONS = "Data.Permissions";
+    public static final String PATH_DATE = "Payload.Date";
+    public static final String PATH_TRANSACTION_DATE = "Data.TransactionFromDateTime";
+    public static final String PATH_TRANSACTION_TO_DATE = "Data.TransactionToDateTime";
+    public static final String PATH_LIMIT = "Query.Limit";
+    public static final String PATH_OFFSET = "Query.Offset";
+    public static final String PATH_QUERY_CONSENT_ID = "Query.ConsentId";
+    public static final String PATH_AUTH_STATUS = "Payload.Authorization.Status";
+    public static final String PATH_CONSENT_DATA = "Consent.Data";
+    public static final String PATH_ACCOUNT_DATA = "Account.Consent-Data";
+    public static final String PATH_FREQUENCY = "Data.Initiation.Frequency";
+    public static final String PATH_FREQUENCY_API_V4 = "Data.Initiation.MandateRelatedInformation.Frequency";
+    public static final String PATH_EXECUTION_DATE = "Data.Initiation.RequestedExecutionDate";
+    public static final String PATH_FUNDS_DATA = "Funds.Confirmation.Consent-Data";
+    public static final String PATH_COLLECTION_METHOD = "Payload.CollectionMethod";
+    public static final String PATH_PAYLOAD_USER_ID = "Payload.UserId";
+    public static final String PATH_PAYLOAD_ACCOUNT_ID = "Payload.AccountId";
+    public static final String PATH_PAYLOAD_PAYMENT_ID = "Payload.PaymentRequestId";
+    public static final String PATH_VERSION = "Data.Version";
+    public static final String PATH_REQUEST_PAYLOAD = "Request.Payload";
+    public static final String PATH_REQUEST_HEADER = "Request.Header";
+    public static final String REQUEST_HEADER = "Request.Header";
+    public static final String HEADER_SIGNATURE = "Header.Signature";
+    public static final String PATH_INSTRUCTION = "Data.Instruction";
+    public static final String PATH_CURRENCY_OF_TRANSFER = "Data.Initiation.CurrencyOfTransfer";
+    public static final String PATH_DESTINATION_COUNTRY_CODE = "Data.Initiation.DestinationCountryCode";
+    public static final String PATH_FIRST_PAYMENT_DATE_TIME = "Data.Initiation.FirstPaymentDateTime";
+    public static final String PATH_FIRST_PAYMENT_DATE_TIME_API_V4 =
+            "Data.Initiation.MandateRelatedInformation.FirstPaymentDateTime";
+    public static final String PATH_COMPLETION_DATE_TIME = "Data.Authorisation.CompletionDateTime";
+    public static final String PATH_DEBTOR_ACCOUNT_PROXY_IDENTIFICATION = "Data.Initiation.DebtorAccount.Proxy" +
+            ".Identification";
+    public static final String PATH_DEBTOR_ACCOUNT_PROXY_CODE = "Data.Initiation.DebtorAccount.Proxy.Code";
+    public static final String PATH_DEBTOR_ACCOUNT_PROXY_TYPE = "Data.Initiation.DebtorAccount.Proxy.Type";
+    public static final String PATH_DEBTOR_ACCOUNT_PROXY = "Data.Initiation.DebtorAccount.Proxy";
+    public static final String PATH_INSTRUCTION_CREDIT_ACCOUNT = "Data.Instruction.CreditorAccount";
+    public static final String PATH_CREDIT_ACCOUNT_PROXY_IDENTIFICATION = "Data.Initiation.CreditorAccount.Proxy" +
+            ".Identification";
+    public static final String PATH_CREDIT_ACCOUNT_PROXY_CODE = "Data.Initiation.CreditorAccount.Proxy.Code";
+    public static final String PATH_CREDIT_ACCOUNT_PROXY_TYPE = "Data.Initiation.CreditorAccount.Proxy.Type";
+    public static final String PATH_CREDIT_ACCOUNT_PROXY = "Data.Initiation.CreditorAccount.Proxy";
+    public static final String PATH_RISK_PAYMENT_CONTEXT = "Data.Risk.PaymentContextCode";
+    public static final String PATH_RISK_MERCHANT_CATEGORY = "Data.Risk.MerchantCategoryCode";
+    public static final String PATH_RISK_MERCHANT_CUSTOMER = "Data.Risk.MerchantCustomerIdentification";
+    public static final String PATH_RISK_ADDRESS = "Data.Risk.Address";
+    public static final String PATH_RISK_COUNTRY = "Data.Risk.Address.Country";
+    public static final String PATH_RISK_ADDRESS_STREET_NAME = "Data.Risk.Address.StreetName";
+    public static final String PATH_RISK_ADDRESS_BUILDING_NO = "Data.Risk.Address.BuildingNumber";
+    public static final String PATH_RISK_ADDRESS_TOWN_NAME = "Data.Risk.Address.TownName";
+    public static final String PATH_RISK_ADDRESS_POST_CODE = "Data.Risk.Address.PostCode";
+    public static final String PATH_RISK_ADDRESS_COUNTRY_SUB_DIVISION = "Data.Risk.Address.CountrySubDivision";
+    public static final String PATH_RISK_ADDRESS_LINE = "Data.Risk.Address.AddressLines";
+    public static final String PATH_CREDIT_AGENT = "Data.Initiation.CreditorAgent";
+    public static final String PATH_CREDIT_AGENT_NAME = "Data.Initiation.CreditorAgent.SchemeName";
+    public static final String PATH_CREDIT_AGENT_IDENTIFICATION = "Data.Initiation.CreditorAgent.Identification";
+    public static final String PATH_DEBTOR_AGENT = "Data.Initiation.DebtorAgent";
+    public static final String PATH_DEBTOR_AGENT_NAME = "Data.Initiation.DebtorAgent.SchemeName";
+    public static final String PATH_DEBTOR_AGENT_IDENTIFICATION = "Data.Initiation.DebtorAgent.Identification";
+    public static final String PATH_REMITTANCE_INFO = "Data.Initiation.RemittanceInformation";
+    public static final String PATH_REMITTANCE_INFO_REFERENCE = "Data.Initiation.RemittanceInformation.Reference";
+    public static final String PATH_REMITTANCE_INFO_UNSTRUCTURED = "Data.Initiation.RemittanceInformation.Unstructured";
+    public static final String PATH_REFERENCE = "Data.Initiation.Reference";
+    public static final String PATH_FINAL_PAYMENT_DATE_TIME = "Data.Initiation.FinalPaymentDateTime";
+    public static final String PATH_FINAL_PAYMENT_DATE_TIME_API_V4 =
+            "Data.Initiation.MandateRelatedInformation.FinalPaymentDateTime";
+    public static final String PATH_RECURRING_PAYMENT_DATE_TIME = "Data.Initiation.RecurringPaymentDateTime";
+    public static final String PATH_RECURRING_PAYMENT_DATE_TIME_API_V4 =
+            "Data.Initiation.MandateRelatedInformation.RecurringPaymentDateTime";
+    public static final String PATH_CURRENCY = "Data.Initiation.CurrencyOfTransfer";
+    public static final String PATH_INSTRUCTION_PRIORITY = "Data.Initiation.InstructionPriority";
+    public static final String PATH_EXTENDED_PURPOSE = "Data.Initiation.ExtendedPurpose";
+    public static final String PATH_PURPOSE = "Data.Initiation.Purpose";
+    public static final String PATH_FIRST_PAYMENT_AMOUNT = "Data.Initiation.FirstPaymentAmount";
+    public static final String PATH_FIRST_PAYMENT_AMOUNT_AMOUNT = "Data.Initiation.FirstPaymentAmount.Amount";
+    public static final String PATH_FIRST_PAYMENT_CURRENCY = "Data.Initiation.FirstPaymentAmount.Currency";
+    public static final String PATH_FINAL_PAYMENT_AMOUNT = "Data.Initiation.FinalPaymentAmount";
+    public static final String PATH_FINAL_PAYMENT_AMOUNT_AMOUNT = "Data.Initiation.FinalPaymentAmount.Amount";
+    public static final String PATH_FINAL_PAYMENT_CURRENCY = "Data.Initiation.FinalPaymentAmount.Currency";
+    public static final String PATH_RECURRING_PAYMENT_AMOUNT = "Data.Initiation.RecurringPaymentAmount";
+    public static final String PATH_RECURRING_PAYMENT_AMOUNT_AMOUNT = "Data.Initiation.RecurringPaymentAmount.Amount";
+    public static final String PATH_RECURRING_PAYMENT_CURRENCY = "Data.Initiation.RecurringPaymentAmount.Currency";
+    public static final String PATH_EXCHANGE_RATE_INFO = "Data.Initiation.ExchangeRateInformation";
+    public static final String PATH_EXCHANGE_RATE_UNIT_CURRENCY =
+            "Data.Initiation.ExchangeRateInformation.UnitCurrency";
+    public static final String PATH_EXCHANGE_RATE = "Data.Initiation.ExchangeRateInformation.ExchangeRate";
+    public static final String PATH_EXCHANGE_RATE_TYPE = "Data.Initiation.ExchangeRateInformation.RateType";
+    public static final String PATH_EXCHANGE_RATE_IDENTIFICATION =
+            "Data.Initiation.ExchangeRateInformation.ContractIdentification";
+    public static final String PATH_CREDITOR = "Data.Initiation.Creditor";
+    public static final String PATH_CREDITOR_NAME = "Data.Initiation.Creditor.Name";
+    public static final String PATH_CREDITOR_ADRESS = "Data.Initiation.Creditor.DeliveryAddress";
+    public static final String PATH_HEADER_CONTENT_TYPE = "Header.ContentType";
+    public static final String PATH_RESPONSE = "Response.body";
+    public static final String PATH_PARAM_CONSENTID = "Consent-id";
+    public static final String PATH_FILE_TYPE = "Data.Initiation.FileType";
+    public static final String PATH_FILE_HASH = "Data.Initiation.FileHash";
+    public static final String PATH_FILE_REFERENCE = "Data.Initiation.FileReference";
+    public static final String PATH_FILE_DEBTOR = "Data.Initiation.DebtorAccount";
+    public static final String PATH_NO_OF_TXS = "Data.Initiation.NumberOfTransactions";
+    public static final String PATH_CONTROL_SUM = "Data.Initiation.ControlSum";
+    public static final String PATH_EVENT_TYPES = "Data.EventTypes";
+    public static final String PATH_CALLBACK_URL = "Data.CallbackUrl";
+    public static final String PATH_SUBSCRIPTION_ID = "Data.EventSubscriptionId";
+    public static final String PATH_QUERY_PARAM = "Url.QueryParameters";
+    public static final String PATH_CONSENT_AUTH = "Consent.Authorisation";
+    public static final String PATH_REQUEST = "Request/Resource";
+    public static final String PATH_CREATION_DATE_TIME = "CreationDateTime";
+    public static final String PATH_PAYMENT_TYPE = "PaymentType";
+    public static final String PATH_FILE = "Data.Initiation.File";
+    public static final String PATH_PSU_AUTHENTICATION_METHOD = "Data.ControlParameters.PSUAuthenticationMethods";
+    public static final String PATH_VRP_TYPE = "Data.ControlParameters.VRPType";
+    public static final String PATH_PERIODIC_LIMITS_AMOUNT = "Data.ControlParameters.PeriodicLimits.Amount";
+    public static final String PATH_PERIODIC_LIMITS_CURRENCY = "Data.ControlParameters.PeriodicLimits.Currency";
+    public static final String PATH_MAXIMUM_INDIVIDUAL_CURRENCY = "Data.ControlParameters.MaximumIndividualAmount." +
+            "Currency";
+    public static final String PATH_MANDATE_RELATED_INFORMATION = "Data.Initiation.MandateRelatedInformation";
+    public static final String PATH_MANDATE_IDENTIFICATION =
+            "Data.Initiation.MandateRelatedInformation.MandateIdentification";
+    public static final String PATH_CLASSIFICATION = "Data.Initiation.MandateRelatedInformation.Classification";
+    public static final String PATH_CATEGORY_PURPOSE_CODE =
+            "Data.Initiation.MandateRelatedInformation.CategoryPurposeCode";
+    public static final String PATH_REASON = "Data.Initiation.MandateRelatedInformation.Reason";
+
+    public static final String PATH_ULTIMATE_CREDITOR = "Data.Initiation.UltimateCreditor";
+    public static final String PATH_ULTIMATE_CREDITOR_SCHEME_NAME = "Data.Initiation.UltimateCreditor.SchemeName";
+    public static final String PATH_ULTIMATE_CREDITOR_IDENTIFICATION =
+            "Data.Initiation.UltimateCreditor.Identification";
+    public static final String PATH_ULTIMATE_CREDITOR_NAME = "Data.Initiation.UltimateCreditor.Name";
+    public static final String PATH_ULTIMATE_CREDITOR_LEI = "Data.Initiation.UltimateCreditor.LEI";
+    public static final String PATH_ULTIMATE_CREDITOR_POSTAL_ADDRESS = "Data.Initiation.UltimateCreditor.PostalAddress";
+    public static final String PATH_ULTIMATE_DEBTOR = "Data.Initiation.UltimateDebtor";
+    public static final String PATH_ULTIMATE_DEBTOR_SCHEME_NAME = "Data.Initiation.UltimateDebtor.SchemeName";
+    public static final String PATH_ULTIMATE_DEBTOR_IDENTIFICATION =
+            "Data.Initiation.UltimateDebtor.Identification";
+    public static final String PATH_ULTIMATE_DEBTOR_NAME = "Data.Initiation.UltimateDebtor.Name";
+    public static final String PATH_ULTIMATE_DEBTOR_LEI = "Data.Initiation.UltimateDebtor.LEI";
+    public static final String PATH_ULTIMATE_DEBTOR_POSTAL_ADDRESS = "Data.Initiation.UltimateDebtor.PostalAddress";
+    public static final String PATH_REGULATORY_REPORTING = "Data.Initiation.RegulatoryReporting";
+
+
 }
 

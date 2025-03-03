@@ -35,6 +35,7 @@ public class ConsentExtensionConstants {
     public static final String CONSENT_ID = "ConsentId";
     public static final String ACCOUNT_ID = "account_id";
     public static final String DATA = "Data";
+    public static final String DATA_SIMPLE = "data";
     public static final String CONSENT_TYPE = "consent_type";
     public static final String AWAIT_AUTHORISE_STATUS = "AwaitingAuthorisation";
     public static final String AUTHORIZED_STATUS = "Authorised";
@@ -184,4 +185,10 @@ public class ConsentExtensionConstants {
     public static final String RESOURCE_PARAMS = "resourceParams";
     public static final String ADDITIONAL_CONSENT_INFO = "additionalConsentInfo";
     public static final String CONSENT_INFO = "consentInformation";
+
+    public static final String REAUTHORIZATION_TITLE = "Reauthorization";
+    public static final String IS_REAUTHORIZATION = "isReauthorization";
+    public static final String IS_REAUTH_ACCOUNT_UPDATE_ENABLED = "isReauthAccountUpdateEnabled";
+    public static final String REAUTH_SELECTED_ACCOUNT = "reauthSelectedAccount";
+
 }
