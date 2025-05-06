@@ -27,6 +27,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.json.JSONObject;
 import org.wso2.carbon.identity.oauth.cache.SessionDataCacheEntry;
+import org.wso2.carbon.identity.oauth.par.exceptions.ParCoreException;
 import org.wso2.carbon.identity.oauth2.RequestObjectException;
 import org.wso2.carbon.identity.oauth2.model.OAuth2Parameters;
 import org.wso2.carbon.user.api.UserStoreException;
@@ -47,6 +48,7 @@ import org.wso2.financial.services.accelerator.consent.mgt.extensions.common.Con
 import org.wso2.financial.services.accelerator.consent.mgt.extensions.common.ConsentExtensionConstants;
 import org.wso2.financial.services.accelerator.consent.mgt.extensions.common.ConsentExtensionExporter;
 import org.wso2.financial.services.accelerator.consent.mgt.service.impl.ConsentCoreServiceImpl;
+import org.wso2.carbon.identity.oauth.par.core.ParAuthServiceImpl;
 
 import java.io.Serializable;
 import java.net.URI;
@@ -88,6 +90,7 @@ public class ConsentAuthorizeEndpoint {
     private static List<ConsentPersistStep> consentPersistSteps = null;
     private static List<ConsentRetrievalStep> consentRetrievalSteps = null;
     private static final ConsentCoreServiceImpl consentCoreService = new ConsentCoreServiceImpl();
+    private static final ParAuthServiceImpl parAuthService = new ParAuthServiceImpl();
 
     public ConsentAuthorizeEndpoint() {
 
@@ -197,6 +200,12 @@ public class ConsentAuthorizeEndpoint {
             log.error("Error while getting regulatory data", e);
             throw new ConsentException(redirectURI, AuthErrorCode.SERVER_ERROR,
                     "Error while obtaining regulatory data", state);
+        }
+
+        try {
+            parAuthService.retrieveParams("","");
+        } catch (ParCoreException e) {
+
         }
 
         executeRetrieval(consentData, jsonObject);
